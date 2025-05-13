@@ -41,7 +41,6 @@ resource "aws_s3_bucket_public_access_block" "app" {
 
 resource "aws_s3_bucket_acl" "app" {
   depends_on = [
-    aws_s3_bucket_ownership_controls.app,
     aws_s3_bucket_public_access_block.app,
   ]
 
